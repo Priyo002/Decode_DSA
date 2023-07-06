@@ -24,8 +24,8 @@ int main() {
 	int idx = 3;//element to be deleted
 	stack<int> s2;
 	while (idx--) {
-		s2.push(s1.pop());
-		//s1.pop();
+		s2.push(s1.top());
+		s1.pop();
 	}
 	display(s2);
 	s1.pop();
