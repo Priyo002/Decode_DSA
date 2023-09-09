@@ -26,10 +26,8 @@ int sum(Node *root) {
 }
 int maxInTree(Node *root) {
 	if (root == NULL) return INT_MIN;
-	int lmax = maxInTree(root->left);
-	int rmax = maxInTree(root->right);
-	int mx = max(lmax, rmax);
-	return max(root->val, mx);
+
+	return max({root->val, maxInTree(root->left), maxInTree(root->right)});
 }
 int size(Node *root) {
 	if (root == NULL) return 0;
