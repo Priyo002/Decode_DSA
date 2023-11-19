@@ -37,7 +37,7 @@ void add_edge(int u, int v, int wt, bool bi_dir = true) {
 	}
 }
 
-int prims(int src, int n) {
+int prims(int src, int n) {//O(VlogV+ElogV+V)
 	priority_queue<pp, vector<pp>, greater<pp>> pq;
 	unordered_set<int> visited;
 	vector<int> parent(n + 1);
